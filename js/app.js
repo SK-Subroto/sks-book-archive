@@ -73,12 +73,15 @@ const displayBooks = (data, searchText) =>{
                                 style="height:350px;"
                                 >
                             <div class="card-body">
-                                <h5 class="card-title  fw-bold">${title}</h5>
-                                <p class="card-text"><span class="fw-bold text-secondary">By:</span> ${author_name}</p>
-                                <p class="card-text"><span class="fst-italic">Publishers:</span> ${publisher}</p>
+                                <h5 class="card-title  fw-bold">${title ?? 'No title found'}</h5>
+                                <p class="card-text"><span class="fw-bold text-secondary">By:</span> ${author_name ?? 'No author found'}</p>
+                                <p class="card-text"><span class="fst-italic">Publishers:</span> ${publisher ?? 'No publisher found'}</p>
                             </div>
                             <div class="card-footer">
-                                <p class="card-text"><span class="fst-italic text-decoration-underline">First publish year:</span> ${first_publish_year}</p>
+                                <p class="card-text">
+                                    <span class="fst-italic text-decoration-underline">First publish year:</span> 
+                                    ${first_publish_year ?? 'No date found'}
+                                </p>
                             </div>
                         </div>
                         `;
